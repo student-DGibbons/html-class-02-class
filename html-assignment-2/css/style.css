@@ -1,0 +1,172 @@
+body{
+    margin: 0px;
+    background-color: #fefefe;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Oswald", sans-serif;
+}
+
+p,a,li,figcaption{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/*Header section using flex*/
+header{
+    display: flex;
+    align-items: center;
+    height: 150px;
+    background-color: #0e0e0e;
+}
+
+header > div{
+    height: 145px;
+    width: auto;
+    flex-grow: 1;
+}
+
+header > div > a > img{
+    width: auto;
+    height: 100%;
+}
+
+header > nav > menu{
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+    display: flex;
+}
+
+header > nav > menu > li{
+    padding: 0px 15px;
+}
+
+header > nav > menu > li > a{
+    color: #fefefe;
+}
+
+/*Masthead section using flex*/
+.masthead{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ececec;
+    height: 85vh;
+    margin: 0 auto;
+}
+
+.masthead > h1{
+    margin-top:0;
+    text-align: center;
+    padding: 10px;
+    width: 40%;
+    color: #0e0e0e;
+    font-size: 76px;
+}
+
+.masthead > img{
+    width: 60%;
+    height:90%;
+}
+
+/*The main content container (a div) that holds the main content and form.
+I was generally going by Pizza Hut's Page, and they had no asides.*/
+
+.flex-content-container{
+    display:flex;
+}
+
+main{
+    width: 100%;
+}
+
+main > section{
+    display: flex;
+    padding: 2%;
+    align-items: center;
+}
+
+main > section > div{
+    width: 50%;
+    padding: 10px;
+}
+
+main > section > div > img{
+    width: 100%;
+    height: auto;
+}
+
+/*targets the deals-class CTA button */
+.deals-class{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0e0e0e;
+    height: 15vh;
+}
+
+.deals-class > a > h3 {
+    color: #fefefe;
+    font-size: 38px;
+}
+
+/* Form container to give a border and add flex */
+.form-container{
+    display:flex;
+    justify-content: center;
+    padding: 10px 5px 5px 10px;
+    margin: 10px 70px;
+    border-color: #0e0e0e;
+    border: solid;
+}
+
+.form-container > form > h3{
+    color:#0e0e0e;
+    font-size: 20px;
+}
+
+.form-container > form > p{
+    color:#0e0e0e;
+    font-size: 16px;
+}
+
+/*footer section at the end with several footer menus*/
+footer{
+    display: flex;
+    align-items: center;
+    background-color: #0e0e0e;
+}
+
+/*Used grid to organize divs and their lists to the left */
+footer > div{
+    display: grid;
+    height: 100%;
+    width: auto;
+    flex-grow: 1;
+    justify-items: left;
+    padding: 4px;
+}
+
+/*targets headings within each container*/
+footer > div > h5{
+    align-items: center;
+    color: #ececec;
+    padding: 5px;
+    margin: 0px;
+    font-size: 20px;
+}
+
+
+
+footer > div> nav > menu{
+    list-style: none;
+    padding-left: 5px;
+    margin: 2px;
+}
+
+footer > div> nav > menu > li > a{
+    color:#ececec;
+    font-size: 16px;
+}

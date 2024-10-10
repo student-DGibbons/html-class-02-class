@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML Assignment 2">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Boston's Stonefired Pizzeria</title>
+    <!--  Google fonts for Oswald and Roboto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+     <!-- add our CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!--First part: Header w/ logo and top menu-->
+    <header>
+      <div>
+        <!--Logo container-->
+        <a href="index.html"><img src="./img/logo.png" alt="header logo"></a>
+      </div>
+      <!--Top menu-->
+      <nav>
+        <menu>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">Coupons</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Locations</a></li>
+        </menu>
+      </nav>
+    </header>
+    
+    <!-- Second part: Masthead-->
+    <section class="masthead">
+      <h1>Boston's Stonefired Pizzeria</h1>
+      <img src="./img/image-1.png" alt="masthead-image">
+    </section>
+
+    <!--Third part: Main with ads followed by order form using flex container-->
+    <div class="flex-content-container">
+      <main>
+        <!--2-column row -->
+         <section>
+            <div>
+              <img src="./img/image-4.png" alt="image">
+            </div>
+          <div>
+            <h2>Our Most Popular Deals</h2>
+            <a href="#"><p>Neopolitan Cheese Pizza For $7.99.</p></a>
+          </div>
+          <div>
+            <img src="./img/image-3.png" alt="image">
+          </div>
+          <div>
+            <a href="#"><p>Any 2-Topping Pizza For Just $10.99.</p></a>
+          </div>
+         </section>
+
+         <!--2-column row -->
+         <section>
+          <div>
+            <h2>Made By Hand With Fresh Ingredients And Never Frozen.</h2>
+            <img src="./img/image-2.png" alt="image">
+          </div>
+          <div>
+            <img src="./img/image-5.png" alt="image">
+            <a href="#"><p>Buy Any Large 3-Topping Pizza For $14.99 And We'll Make You A Medium At Half-Price!</p></a>
+          </div>
+         </section>
+
+         <!--Serves as a sort of CTA button for the deals page-->
+         <div class="deals-class">
+          <a href="#"><h3>View All Deals</h3></a>
+         </div>
+
+         <!-- Form to place an order -->
+
+        <section class="form-container">
+          
+          <form action="action-page.php" method="post">
+             <h3>Please Fill Out Your Order</h3>
+            
+            <!--Takes a number from 1-99-->
+            <p><label for="quantity1">How many pizzas?</label>
+              <br>
+              <input type="number" name="quantity1" id="quantity1" min="1" max="99" value="0">
+            </p>
+
+            <p>
+              <label>What size?</label>
+              <br>
+              <label>Small</label>
+              <input type="radio" name="pizzasize">
+              <label>Medium</label>
+              <input type="radio" name="pizzasize">
+              <label>Large</label>
+              <input type="radio" name="pizzasize">
+              <label>Extra Large</label>
+              <input type="radio" name="pizzasize">
+            </p>
+
+            <!--Takes a number from 1-10-->
+            <p><label for="quantity2">How many toppings?</label>
+              <br>
+              <input type="number" name="quantity2" id="quantity2" min="1" max="10" value="0">
+            </p>
+            
+            
+            <!--Toppings checkboxes (multiple selections permitted)-->
+            <p>
+              <label>Please choose your toppings</label>
+              <br>
+              <input type="checkbox" name="pepperoni" id="pepperoni" value="pepperoni">
+              <label for="pepperoni">Pepperoni</label>
+              <br>
+              <input type="checkbox" name="mushrooms" id="mushrooms" value="mushrooms">
+              <label for="mushrooms">Mushrooms</label>
+              <br>
+              <input type="checkbox" name="green-peppers" id="green-peppers" value="green-peppers">
+              <label for="green-peppers">Green peppers</label>
+              <br>
+              <input type="checkbox" name="green-olives" id="green-olives" value="green-olives">
+              <label for="green-olives">Green olives</label>
+              <br>
+              <input type="checkbox" name="black-olives" id="black-olives" value="black-olives">
+              <label for="black-olives">Black olives</label>
+              <br>
+              <input type="checkbox" name="onions" id="onions" value="onions">
+              <label for="onions">Onions</label>
+              <br>
+              <input type="checkbox" name="sausage" id="sausage" value="sausage">
+              <label for="sausage">Sausage</label>
+              <br>
+              <input type="checkbox" name="fresh-garlic" id="fresh-garlic" value="fresh-garlic">
+              <label for="fresh-garlic">Fresh garlic</label>
+              <br>
+              <input type="checkbox" name="feta-cheese" id="feta-cheese" value="feta-cheese">
+              <label for="feta-cheese">Feta cheese</label>
+              <br>
+              <input type="checkbox" name="bacon" id="bacon" value="bacon">
+              <label for="bacon">Bacon</label>
+              <br>
+              <input type="checkbox" name="anchovies" id="anchovies" value="anchovies">
+              <label for="anchovies">Anchovies</label>
+            </p>
+
+            <!--Extras using yes/no radio buttons-->
+            <p>
+              <label>Extra cheese?</label>
+              <br>
+              <label>Yes</label>
+              <input type="radio" name="extracheese">
+              <label>No</label name="extracheese">
+              <input type="radio" name="extracheese">
+            </p>
+            <p>
+              <label>Thin crust?</label>
+              <br>
+              <label>Yes</label>
+              <input type="radio" name="thincrust">
+              <label>No</label name="thincrust">
+                <input type="radio" name="thincrust">
+            </p>
+            <p>
+              <label>Stuffed crust?</label>
+              <br>
+              <label>Yes</label>
+              <input type="radio" name="stuffedcrust">
+              <label>No</label name="stuffedcrust">
+              <input type="radio" name="stuffedcrust">
+            </p>
+
+            <p><label>How many drinks?</label>
+              <br>
+              <input type="number" name="quantity3" min="1" max="99" value="0">
+            </p>
+
+            <!--Drinks checkboxes (multiple selections permitted)-->
+            <p>
+              <label>Please choose your drinks</label>
+              <br>
+              <input type="checkbox" name="coke" id="coke" value="coke">
+              <label for="coke">Coke</label>
+              <br>
+              <input type="checkbox" name="pepsi" id="pepsi" value="pepsi">
+              <label for="pepsi">Pepsi</label>
+              <br>
+              <input type="checkbox" name="sprite" id="sprite" value="sprite">
+              <label for="sprite">Sprite</label>
+              <br>
+              <input type="checkbox" name="mountain-dew" id="mountain-dew" value="mountain-dew">
+              <label for="mountain-dew">Mountain Dew</label>
+              <br>
+              <input type="checkbox" name="water" id="water" value="water">
+              <label for="water">Water</label>              
+            </p>
+
+            <p>
+              <label>For pickup or delivery?</label>
+              <br>
+              <label>Pickup</label>
+              <input type="radio" name="pickupdelivery">
+              <label>Delivery</label name="pickupdelivery">
+              <input type="radio" name="pickupdelivery">
+            </p>
+
+            <p>
+              <label for="payment">How would you like to pay?</label>
+              <br>
+              <select name="payment" id="payment">
+                <option value="visa">Visa</option>
+                <option value="mastercard">Mastercard</option>
+                <option value="debit">Debit</option>
+                <option value="cash">Cash</option>
+                <option value="giftcard">Giftcard</option>
+              </select>
+            </p>
+
+            <!--Personal info-->
+            <p><input type="text" id="fname" name="lname" placeholder="First Name"></p>
+            <p><input type="text" name="lname" placeholder="Last Name"></p>
+            <p><input type="email" name="email1" placeholder="john.doe@gmail.com"></p>
+            <p><input type="tel" name="phone" placeholder="123-456-7890"></p>
+            <p><textarea placeholder="Add comments" maxlength="100"></textarea></p>
+            <!--Submit/reset button-->
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+          </form>
+        </section>
+
+      </main>
+
+    </div>
+    <!--End of main section/main flex container-->
+
+    <footer>
+      <!--Footer menus contained in divs-->
+      <div>
+        <h5>Order</h5>
+        <nav>
+          <menu>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Pizzas</a></li>
+            <li><a href="#">Sides</a></li>
+            <li><a href="#">Desserts</a></li>
+            <li><a href="#">Drinks</a></li>
+          </menu>
+        </nav>
+      </div>
+      <div>
+        <h5>Help & Service</h5>
+        <nav>
+          <menu>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Franchise</a></li>
+            <li><a href="#">FAQs & Help</a></li>
+            <li><a href="#">Careers</a></li>
+          </menu>
+        </nav>
+      </div>
+      <div>
+        <h5>Nutrition</h5>
+        <nav>
+          <menu>
+            <li><a href="#">Nutrition Information</a></li>
+            <li><a href="#">Food Allergens & Sensitivity</a></li>
+            <li><a href="#">Ingredient Listing</a></li>
+            <li><a href="#">Gluten-Free FAQ</a></li>
+            <li><a href="#">Drinks</a></li>
+          </menu>
+        </nav>
+      </div>
+      <div>
+        <h5>Our Policies</h5>
+        <nav>
+          <menu>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Responsible Disclosure</a></li>
+            <li><a href="#">Cookies & Ads</a></li>
+            <li><a href="#">Our Company</a></li>
+          </menu>
+        </nav>
+      </div>
+      <!--Contact form (5th div)-->
+      <div>
+        <h5>Join Mailing List</h5>
+        <form action="file" method="post">
+          <p><input type="text" name="name" placeholder="Your name"></p>
+          <p><input type="email" name="email2" placeholder="Your email"></p>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </footer>
+
+  </body>
+</html>
