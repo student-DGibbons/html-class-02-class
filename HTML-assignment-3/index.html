@@ -1,0 +1,59 @@
+<!doctype HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML Assignment 3">
+    <meta name="robots" content="noindex, nofollow">
+    <title>The Mummy Returns' Poster Remake</title>
+    <!--  Google fonts for Baskerville-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+     <!-- adding CSS file-->
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <!--No header needed-->
+    <!--Main only contains the poster image (including title text) and the brief caption-->
+    <main class="container">
+        <img src="./img/mummy-returns-no-text.jpg" alt="the-mummy-returns">
+        <a href="https://www.youtube.com/watch?v=3yXjs7BUKYc" target="_blank"><h4>Adventure<span>is</span><span>reborn</span></h4></a>
+    </main>
+    <footer>
+        <!--Footer contains four divs that are aligned vertically, with image copies contained in the last div-->
+        <div>
+            <p>Universal Pictures <span>presents an </span>Alphaville<span> production a</span> 
+                Stephen Sommers <span>film</span> Brendan Fraser 'The Mummy Returns' 
+                Rachel Weisz John Hannah Arnold Vosloo Oded Fehr Patricia Velasquez</p>
+        </div>
+        <div>
+            <p><span>and</span> The Rock <span> as The Scorpion King</span><span class="internal-span"> Music<span>by</span></span> Alan Silvestri <span class="internal-span"> Film<span>Editor</span></span> 
+                Bob Ducsay <span class="internal-span"> Production<span>Designer</span></span> Allan Cameron <span class="internal-span"> Director of<span>Photography</span></span> Adrian Biddle <span>B.S.C</span> 
+            <span class="internal-span"> Executive<span>Producers</span></span> Bob Ducsay Don Zepfel <span class="internal-span"> Produced<span>by</span></span> James Jacks Sean Daniel </p>
+        </div>
+        <div>
+            <p><span class="internal-span">Written and<span>directed by</span></span> Stephen Sommers</p>
+        </div>
+        <div class="copyright-container">
+            <!--I use paragraphs in a flexbox here rather than a single paragraph
+            because I need to intersperse images (copyright symbols/logos) in this line anyways-->
+            <p>Alphaville</p>
+            <p><span class="second-internal-span">This film is<span>not yet rated</span></span></p>
+            <p><span class="second-internal-span">Special Visual Effects & Animation<span>By Industrial Light & Magic</span></span></p>
+            <p><span class="second-internal-span">Read the<span>Berkeley Book</span></span></p>
+            <p><span class="date-span">May 2001</span></p>
+            <img src="./img/logos-1.png" alt="a-set-of-logos" id="logos-1">
+            <a href="https://www.youtube.com/watch?v=3yXjs7BUKYc" target="_blank"><p>www.themummy.com</p></a>
+            <!--There are words underneath A Universal Release, but I can't read them.
+            They lose too much resolution when I zoom, so I decided to leave them out.
+            If I did included them, I would have targeted them in the same way as I did in
+            the last div using nested spans-->
+            <p>A Universal Release</p>
+            <img src="./img/logos-2.png" alt="universal-logo" id="logos-2">
+        </div>
+        <!--Empty div to add a bit more padding at the bottom-->
+        <div class="padding-div">
+        </div>
+    </footer>
+  </body>

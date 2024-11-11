@@ -1,0 +1,186 @@
+body {
+    margin: 0px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+h1,h2,h3,h4,h5,h6{
+    /*Not sure what the actual font is, but this is fairly close.*/
+    font-family: "Baskerville", sans-serif;
+}
+
+p,a,li,figcaption{
+    font-family: "Baskerville", sans-serif;
+    font-size: 20px;
+}
+
+
+main{
+    width: 100%;
+    height:auto;
+    padding: 2px;
+    background-color: #000000;
+    /*Using flex to center the image*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > a> h4{
+    /*Changing font weight to thin it out like the original*/
+    font-weight: 300;
+    /*Positioning the text. You need to minimize the screen to the 
+    same width as the poster for the most accurate positioning*/
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #e7cd78;
+    text-align: center;
+    /*I know shadow isn't necessary for this assignment, but it makes it look way better */
+    text-shadow: 2px 2px #0e1111;
+}
+
+/*Using span within the heading and display:block in place of break*/
+main > a > h4 > span{
+    display: block;
+}
+
+
+footer{
+    background-color: #000000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+footer > div{
+    flex-grow: 1;
+    justify-content: center;
+}
+footer > div > p{
+    font-size: 0.4rem;
+    color:#e7cd78;
+    font-weight: 300;
+    /*Extra squished letters*/
+    letter-spacing: 0.005rem;
+    transform: scaleY(1.1);
+}
+
+footer > div > p > span{
+    font-size: 0.35rem;
+    line-height: 0.75;
+}
+
+/* this and the next two selectors target specific spans with nested spans
+ to layer text on top of eachother inline.*/
+.internal-span {
+    display: inline-block;
+    text-align: right;
+    font-size: 0.75em;
+    padding:0%;
+    margin:0%;
+}
+
+.internal-span > span {
+    display: block;
+    padding: 0.5px 0px;
+}
+
+.copyright-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .copyright-container{
+    display: grid;
+    grid-template-columns:
+    2fr 1fr 1fr 1fr 6fr 1fr 1fr 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+} */
+
+/*This particular row has a lot of padding that's absent in the other rows (only horizontally)*/
+.copyright-container > p{
+    padding-inline: 5px;
+}
+
+
+
+#logos-1{
+    max-width: 4rem;
+    height: auto;
+}
+
+#logos-2{
+    max-width: 1rem;
+    height: auto;
+}
+
+
+/*Adding borders around individual text groupings where needed, making text thicker, changing sizes, etc.*/
+
+.copyright-container > p:nth-child(1){
+    font-size: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.copyright-container > p:nth-child(2){
+    border: 1px;
+    border-style: solid;
+    border-color: #e7cd78;
+    padding: 2px 0.5px;
+    font-weight: 600;
+}
+.copyright-container > p:nth-child(4){
+    border: 1px;
+    border-style: solid;
+    border-color: #e7cd78;
+    padding: 2px 0.5px;
+    font-weight: 600;
+}
+
+/* themummy.com hyperlink*/
+.copyright-container > a > p{
+    font-size: 0.4rem;
+    letter-spacing: 0px;
+    text-decoration: none;
+    /*For some reason, the colour wanted to stay purple after clicking it, so I overrode it by reinputting the colour*/
+    color: #e7cd78;
+}
+.copyright-container > p:nth-child(8){
+    font-size: 0.55rem;
+    letter-spacing: 0px;
+}
+
+
+/*The spans with internal spans need to be centered rather than aligned to the right, hence the second set of selectors*/
+.second-internal-span {
+    display: inline-block;
+    text-align: center;
+    font-size: 0.5em;
+}
+
+.second-internal-span > span {
+    display: block;
+    padding: 0.5px 0px;
+}
+
+/*Targets the opening date for custom sizing*/
+.date-span{
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    padding: 0px 0px 0px 11px;
+}
+
+
+.padding-div{
+    padding: 5px;
+}
+
+
