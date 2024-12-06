@@ -1,0 +1,839 @@
+/* General */
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-color: #FAF9F6;
+}
+
+h1, label, input[type=submit]{
+  font-family: "Orbitron", Helvetica;
+}
+
+h2,h3,h4,h5,h6,th{
+  font-family: "Poppins", Helvetica;
+  color: #0e0e0e;
+}
+
+p,a,li,td, input, select, textarea, button{
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #0e0e0e;
+}
+
+
+/* Header section */
+header{
+  /* Fixed position and size so that it follows as you scroll */
+  /* I use flexbox throughout, as I'm more comfortable making things responsive that way */
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 85px;
+  padding: 10px 0px;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e0e0e;
+  /* Z-index is set to 1 so it's always on top. I ran into an issue where it was clipping
+  into the YouTube video I have. I tried setting the Z-index of the video to -1, which stopped
+  the clipping but made it unplayable. Thus, I did the reverse (increased the header's z-index). */
+  z-index: 1;
+}
+
+header > div{
+  width: auto;
+  height: 100%;
+  flex-grow: 1;
+  padding-top: 15px;
+}
+
+header > div > a > img{
+  width: auto;
+  height: 75%;
+}
+
+header > nav > menu{
+  display: flex;
+  margin: 0px;
+  padding: 10px 15px 10px 10px;
+  list-style: none;
+}
+
+header > nav > menu > li{
+  /* Padding between list items */
+  padding: 0px 15px;
+  font-family: "Orbitron", Helvetica;
+  font-weight: 700;
+}
+
+header > nav > menu > li > a{
+  border-radius: 25px;
+  background-color: #E60012;
+  color:#FAF9F6;
+  padding: 10%;
+  font-size: 1.2em;
+}
+
+/* Hover effect for the menu */
+header > nav > menu > li > a:hover{
+  background-color: #E60012;
+  color:#0e0e0e;
+  font-size: 1.8vw;
+}
+
+.logo{
+  padding-left: 2%;
+  opacity: 90%;
+  background: transparent;
+}
+
+/* Hero image section */
+.scrolledHeader{
+  height: 85px;
+}
+
+.hero{
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.hero > div{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  align-items: center;
+  /*align items aligns vertically (cross axis)*/
+  justify-content: center;
+  /*aligns items horizontally (main axis)*/
+}
+
+.hero > div > h1{
+  display: inline-block;
+  /* Rather than using media queries, I decided to use the viewport width (vw) for most headings
+  to ensure that headings always looked good and were responsive. 
+  For regular text, it wasn't necessary, though, and would have made things too small. */
+  font-size: 9.25vw;
+  /* Styling it closer to the actual logo */
+  font-style: italic;
+  font-weight: 900;
+  color: #FAF9F6;
+  text-align: center;
+  line-height: 100%;
+}
+
+/* Using span in place of break */
+.hero > div > h1 > span{
+  display: block;
+  font-size: 5.5vw;
+  background-color: #E60012;
+}
+
+
+.filler{
+  height: 85px;
+  width: auto;
+  /* The filler class has the exact same height as the moving header. Because the header
+has a z-index of 1, it automatically renders above whatever is at the top of the first section.
+Doing this moves the content down exactly the same distace, so content renders without 
+having to worry about it*/
+}
+
+/* Main section styling */
+main{
+  width: 100%;
+}
+
+main > section{
+  padding: 1% 5% 0% 5%;
+  align-items: center;
+}
+
+/* Banner to break up sections */
+
+.banner-class{
+  width:fit-content;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0e0e0e;
+  height: 15vh;
+  /* border-style: solid;
+  border-color: #b4a078; */
+  width: 100%; 
+}
+
+/* Banner class is used on both the index page and shop page */
+.banner-class > h2 {
+  color: #FAF9F6;
+  font-size: 5vw;
+}
+
+.banner-class > h3{
+  color: #FAF9F6;
+  font-size: 5vw;
+}
+
+/* Making the background of the CTA Nintendo's red colour 
+and rounding edges to make it look like a button */
+a > .banner-class{
+  background-color: #E60012;
+  border-radius: 25px;
+}
+
+/* Section 1 styling */
+
+.video-div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0%;
+}
+
+/* This was taken from W3 schools and then further customized with the above class */
+.internal-video-div{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.responsive-video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Section 2 styling */
+
+/* Making a responsive flex container for the two different div-containers */
+.div-container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 10px 0px;
+  border: 1px solid #0e0e0e;
+}
+
+/* Making each image take up the same width for first type of div-container */
+.sub-container-1 {
+  flex: 1 1 calc(50% - 20px);
+  padding: 5px;
+}
+
+.sub-container-1 > img{
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Making each image take up the same width for the second type of div-container */
+.sub-container-2{
+  flex: 1 1 calc(33.333% - 20px);
+  padding: 5px;
+}
+
+.sub-container-2 > img{
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Adding hover effect for "Shop Now" CTA */
+a .banner-class h2:hover{
+  color:#0e0e0e;
+  cursor: pointer;
+}
+
+/* Section 3 styling */
+/* accordian */
+
+#accordian > ul{
+  list-style: none;
+}
+
+#accordian > h3{
+  cursor: pointer;
+  font-size: 1.2em;
+  line-height: 55px;
+  padding: 0px 8px;
+  margin-bottom: 8px;
+  background-color: #FAF9F6;
+}
+
+/* Hover effect for accordian to indicate it's clickable*/
+#accordian h3:hover{
+  color: #E60012;
+  font-size: 1.35em;
+}
+
+#accordian > h3 > span{
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+
+#accordian > .row{
+  margin: 0px;
+  background-color: #FAF9F6;
+  display: none;
+}
+
+#accordian > li.active > h3{
+  background-color: #FAF9F6;
+}
+
+#accordian > li.active > .row{
+  display: block;
+}
+
+
+
+/* About and Contact section CSS */
+/* I decided that I could reuse the About section code for the Contact form,
+since the same format will look good, only the left side has a contact form instead of paragraph */
+.div-container-2{
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: stretch;
+  justify-content: space-around;
+}
+
+.div-main-2{
+  /* Main section is on the left and takes up 70% of the vw */
+  float: left;
+  width: 70%;
+  /* padding: 10px; */
+}
+
+.div-main-2 > h2{
+  margin-bottom: -3%;
+  padding: 15px 10px 10px 10px;
+    /* a bit of extra style since it looked bland */
+    text-decoration: underline;
+    text-decoration-color: #E60012;
+}
+
+.div-section-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-section-2 > img{
+  height: 100%;
+  width: auto;
+  padding: 0%;
+  margin: 0%;
+  opacity: 1.2;
+}
+
+.div-aside-2{
+  /* Aside is on the right and takes up 30% of the vw */
+  float: right;
+  /* padding: 5px; */
+  width: 30%;
+  /* Making the aside container another flex so I can centre the image */
+  display: flex;
+  align-items: center;
+
+}
+
+.div-aside-2 > div {
+  flex: 1;
+}
+
+.div-aside-2 > div > img{
+  width: 100%;
+  height: auto;
+}
+
+.div-divider-2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vw;
+  width: auto;
+  /* Giving everything a bit more flavour */
+  background-color: rgba(230,0,20,.9);
+/* 
+  background-color: #E60012;
+  opacity: 0.8; */
+}
+
+.div-divider-2 > h2{
+  font-size: 6.8vw;
+  font-style: italic;
+  font-weight: 900;
+  color: #FAF9F6;
+  /* text-align: center; */
+  line-height: 100%;
+  padding-right: 10%;
+}
+
+.div-divider-2 > img{
+  width: auto;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.mission-statement{
+  padding: 10px;
+}
+
+.mission-statement > h2{
+  padding-left: 5px;
+    /* a bit of extra style since it looked bland */
+    text-decoration: underline;
+    text-decoration-color: #E60012;
+}
+
+.mission-statement > div{
+  padding: 30px;
+}
+.mission-statement > h2{
+  margin-bottom: -4%;
+}
+
+/* Form CSS for contact page */
+
+.form-container-1{
+  padding: 10px;
+}
+
+.form-container-1 > form > label{
+  font-weight: 700;
+}
+input[type=text], input[type=email], input[type=submit], select, textarea {
+  width: 100%;
+  height: auto;
+  padding: 12px;
+  border: 1px solid #ccc;
+   /* Adding non-intrusive border to make transition from off-white to white less jaring */
+  border-radius: 25px;
+  /* Rounding borders like they are in the footer */
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  /*  can only resize vertically so it doesn't mess up mobile experience*/
+}
+
+.form-container-1 > form > textarea{
+  height:250px;
+}
+
+/* Styling and hover effect for submit button on contact page */
+.contact-submit{
+  background-color: #0e0e0e;
+  color: #FAF9F6;
+}
+
+.contact-submit:hover{
+  color:#E60012;
+  cursor: pointer;
+}
+
+
+/* Shop page CSS */
+
+.shop-main > h2{
+  padding: 20px 0px 0px 20px;
+  margin-left: 3px;
+  /* a bit of extra style since it looked bland */
+  text-decoration: underline;
+  text-decoration-color: #E60012;
+}
+
+/* Uses the same div container as the index page only it's filled with custom cards */
+.card-container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+
+.card{
+  flex: 1 1 calc(33.333% - 20px);
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* Heights and max width set to prevent overflowing */
+  height: 450px;
+  width: auto;
+  max-width: 350px;
+  margin: 3px;
+  text-align: center;
+}
+
+/* Similar code as used for div containers on index.html with some modifications */
+.card > img{
+  /* Making all images the same size */
+  display: block;
+  height: 235px;
+  width: 350px;
+  object-fit: cover;
+}
+
+/* Adjusting heights to fill  */
+.card > h3{
+  font-size: 18px;
+  height: 10%;
+  color: #0e0e0e;
+}
+
+.prices{
+  color:#575252;
+  height: 5%;
+}
+
+.card-message{
+  height: 10%;
+}
+
+.card > a {
+  /* Making it look like a button */
+  width: 100%;
+  height: 5%;
+  background-color: #0e0e0e;
+  color: #FAF9F6;
+  border-radius: 25px;
+  display: block;
+  border: 2px solid #FAF9F6;
+}
+
+.card > a:hover{
+  color: #E60012;
+  cursor: pointer;
+}
+
+
+/* CSS for product pages */
+
+.product-container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 10px 0px;
+}
+
+.product-main{
+  /* Main section is on the left and takes up 70% of the vw */
+  float: left;
+  width: 60%;
+}
+
+.product-main > h2{
+  margin-bottom: -3%;
+  padding: 15px 10px 10px 10px;
+    /* a bit of extra style since it looked bland */
+    text-decoration: underline;
+    text-decoration-color: #E60012;
+}
+
+.product-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-aside{
+  /* Aside is on the right and takes up 30% of the vw */
+  float: right;
+  width: 40%;
+  height: auto;
+  /* Making the aside container another flex so I can centre the image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-aside > div {
+  flex: 1;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.product-aside > div > img{
+  width: 100%;
+  height: auto;
+  padding: 0%;
+  margin: 0%;
+  opacity: 1.2;
+}
+
+.product-aside > a{
+  text-align: center;
+  width: 400px;
+  display: block;
+  border-radius: 25px;
+  background-color: #0e0e0e;
+  color:#FAF9F6;
+}
+
+.product-aside > a:hover{
+  color: #E60012;
+  cursor: pointer;
+}
+
+
+
+
+/*footer section at the end with several footer menus*/
+footer{
+  display: flex;
+  align-items: start;
+  /* Found this image and thought it was too perfect to leave out */
+  background-image: url("../img/footer-img.png");
+  background-size: 100%;
+  background-position: center;
+  height: auto;
+}
+
+footer .footer-container{
+  background-color: rgba(0,0,0,.5);
+  height: 100%;
+  width: 100%;
+}
+
+.footer-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px;
+}
+
+.footer-col nav menu{
+  list-style: none;
+}
+
+.footer-col h4{
+  color: #FAF9F6;
+  margin-bottom: 25px;
+  font-size: 22px;
+  position: relative;
+  font-family: "Orbitron", Helvetica;
+}
+
+.footer-col nav menu li{
+  padding: 10px 0px;
+  font-family: "Orbitron", Helvetica;
+  font-weight: 600;
+  /* List items were spaced a little too far */
+  line-height: 50%;
+}
+.footer-col nav menu li a{
+  color: #FAF9F6;
+  text-decoration: none;
+  font-size: 16px;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.footer-col nav menu li a:hover{
+  color: #E60012;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.footer-col input{
+  border: none;
+  width: 150px;
+  height: 45px;
+  display: block;
+  padding-left: 20px;
+  margin: 14px 0px;
+  border-radius: 25px;
+  font-family: "Orbitron", Helvetica;
+  font-weight: 600;
+  /* For some reason, the submit button wasn't the same size as other inputs,
+  so I overrode it using border-box */
+  box-sizing: border-box;
+}
+
+.footer-col .input-submit{
+  padding: 0px 20px;
+  background-color: #0e0e0e;
+  border: none;
+  color: #FAF9F6;
+}
+
+.footer-col .input-submit:hover{
+  color: #E60012;
+  cursor: pointer;
+}
+
+.footer-col p {
+  color: #FAF9F6;
+}
+
+hr{
+  opacity: 0.7;
+}
+
+/* styling border in place of HR */
+
+#footer-row-1{
+  border-bottom: 1px solid #FAF9F6;
+}
+
+.footer-row .social i{
+  display: inline-block;
+  color: #FAF9F6;
+  font-size: 30px;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.footer-row .social i:hover{
+  color:#E60012;
+  cursor: pointer;
+}
+
+/* Setting break point at 1160px for shop page */
+@media (max-width:1160px){
+
+  /* Resizing product button */
+  .product-aside > a{
+    text-align: center;
+    width: 320px;
+  }
+  .card{
+    width: auto;
+    max-width: 250px;
+  }
+
+  .card > img{
+    /* Making all images the same size */
+    display: block;
+    height: 215px;
+    width: 250px;
+    object-fit: cover;
+  }
+
+}
+
+
+/* Setting breakpoint at 810px for header and shop page cards */
+@media (max-width:810px){
+
+  /* Header changes */
+  /* Changing logo element to shrink when needed */
+  header > div{
+    padding-top: 3.5em;
+  }
+
+  header > div > a > img{
+    width: auto;
+    height: 35%;
+  }
+
+  header > nav > menu > li{
+    /* Padding between list items */
+    padding: 0px 10px;
+  }
+
+  /* Changing nav menu so it doesn't keep shrinking */
+  header > nav > menu > li > a{
+    font-size: 0.6em;
+  }
+
+
+  /* Getting rid of the aside when it stops scaling properly to make room for other content */
+
+  .div-aside-2{
+    display: none;
+  }
+
+  .div-main-2{
+    /* Rescaling main */
+    width: 100%;
+  }
+
+  /* Changing shop cards to display in columns rather than rows */
+  .card-container{
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+/* Reworking card valuess */
+  .card{
+    flex: 1 1 calc(33.333% - 20px);
+    padding: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* Heights and max width set to prevent overflowing */
+    height: 450px;
+    width: auto;
+    max-width: 300px;
+    margin: 3px;
+    text-align: center;
+  }
+
+  .card > img{
+    display: block;
+    height: 235px;
+    width: 300px;
+    object-fit: cover;
+  }
+
+ 
+
+  /* Moving product aside to the bottom for mobile */
+  .product-aside{
+    /* Overriding the float so it's forced down */
+    float: none;
+    width: 90%;
+    height: auto;
+  }
+/* Making product main take up full width */
+  .product-main{
+    float: left;
+    width: 100%;
+  }
+
+  /* Locking width to image width since 100% is going by the aside */
+  .product-aside > a{
+    width: 300px;
+    display: block;
+    height: auto;
+  }
+
+
+
+  /* Changing footer elements to display in columns rather than rows */
+  footer .footer-row{
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  footer .footer-col ul{
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-col input{
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
+/* I had initially added another breakpoint, but it ultimately 
+wasn't necessary with my final header */

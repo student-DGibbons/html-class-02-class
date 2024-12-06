@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head id="head">
+    <title>Super Nintendo Entertainment System</title>
+    <meta name="description" content="SNES—Final Project">
+    <!--  link js files  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/custom-js.js"></script>
+  </head>
+  <body>
+    <header id="header"></header>
+    <section class="hero">
+      <div>
+        <h1>SUPER NINTENDO<span>ENTERTAINMENT SYSTEM™</span></h1>
+      </div>
+    </section>
+    <main>
+      <!-- Section 1 -->
+      <section class="section-1">
+        <!-- Creating a banner class for easier title stylings -->
+        <div class="banner-class">
+          <h2>The Greatest Console Ever Made</h2>
+        </div>
+
+        <!-- The extra container div is needed to make the other one flex and properly align 
+         everything/add padding. The other container div is used to make the video's size responsive 
+         (which requires using the padding) -->
+        <div class="video-div">
+          <div class="internal-video-div">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/z26LrE-hquM?si=7TUT3qOn87p47DXN" 
+            class="responsive-video" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+
+
+        <div class="div-container">
+          <div class="sub-container-1">
+            <!-- Most of the images I found were copyright-free off of Flickr or Unsplash.
+             In particular, one Flickr user, mrz2112, shared his entire Super Nintendo collection -->
+            <img src="./img/image-1.jpg" alt="image 1">
+          </div>
+          <div class="sub-container-1">
+            <img src="./img/image-2.jpg" alt="image 2">
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="section-2">
+        <div class="banner-class">
+          <h2>The Widest Selection Ever</h2>
+        </div>
+        <!-- div container 1 (type 2) -->
+        <div class="div-container">
+          <div class="sub-container-2">
+            <img src="./img/image-3.jpg" alt="image 3">
+          </div>
+          <div class="sub-container-2">
+            <img src="./img/image-4.jpg" alt="image 4">
+          </div>
+          <div class="sub-container-2">
+            <img src="./img/image-5.jpg" alt="image 5">
+          </div>
+        </div>
+        <!-- div container 2 (type 2) -->
+        <div class="div-container">
+          <div class="sub-container-2">
+            <img src="./img/image-6.jpg" alt="image 6">
+          </div>
+          <div class="sub-container-2">
+            <img src="./img/image-7.jpg" alt="image 7">
+          </div>
+          <div class="sub-container-2">
+            <img src="./img/image-8.jpg" alt="image 8">
+          </div>
+        </div>
+        <!-- Shop CTA -->
+        <a href="./pages/shop.html" target="_self"><div class="banner-class">
+          <h2 id="shop-now">Shop Now</h2>
+        </div></a>
+        <!-- div container 3 (type 2) -->
+        <div class="div-container">
+          <div class="sub-container-2">
+            <img src="./img/image-9.jpg" alt="image 9">
+          </div>
+          <div class="sub-container-2">
+            <img src="./img/image-10.jpg" alt="image 10">
+          </div>
+          <div class="sub-container-2">
+            <img src="./img/image-11.jpg" alt="image 11">
+          </div>
+        </div>
+
+
+      </section>
+
+      <!-- Section 3 -->
+      <section class="section-3">
+        <div class="banner-class">
+          <h2>Hardware & Specs</h2>
+        </div>
+        <div class="div-container">
+          <div id="accordian">
+            <ul>
+              <li class="active">
+                <h3><span></span>Basic Details</h3>
+                <div class="row">
+                  <p>The 16-bit design of the Super NES incorporates graphics and sound co-processors
+                    that perform tiling and simulated 3D effects, a palette of 32,768 colors, and 8-channel
+                      ADPCM audio. These base platform features, plus the ability to dramatically extend 
+                      them all through substantial chip upgrades inside of each cartridge, 
+                      represent a leap over the 8-bit NES generation and some significant advantages over 
+                      16-bit competitors.</p>
+                </div>
+              </li>
+              <li>
+                <h3><span></span>CPU & RAM</h3>
+                <div class="row">
+                  <p>The CPU is a Ricoh 5A22, a derivative of the 16-bit WDC 65C816 microprocessor advantages advantages and 
+                    This CPU has an 8-bit data bus and two address buses. The 24-bit "Bus A" is designated for general
+                    accesses, and the 8-bit "Bus B" can access support chip registers, such as the video and audio co-processors.
+                    </p>
+                    <p>The WDC 65C816 supports an 8-channel DMA unit, an 8-bit parallel I/O port a controller port
+                        interface circuits allowing serial and parallel access to controller data, a 16-bit multiplication 
+                        and division unit, and circuitry for generating non-maskable interrupts on V-blank and IRQ 
+                        interrupts on calculated screen positions.
+                    </p>
+                    <p>
+                      The console contains 128 KB of general-purpose "work" RAM, which is separate from the
+                      64 KB dedicated to the video subsystem and the 64 KB dedicated to the
+                        audio subsystem.
+                    </p>
+                </div>
+              </li>
+              <li>
+                <h3><span></span>Video</h3>
+                <div class="row">
+                  <p>The Picture Processing Unit (PPU) consists of two closely tied 
+                    IC packages. It contains 64 KB of SRAM for video data, 544 bytes of object 
+                    attribute memory (OAM) for sprite data, and 256 x 15 bits of color generator RAM (CGRAM)
+                    for palette data. This CGRAM provisions up to 256 colors, 
+                    chosen from the 15-bit RGB color space, from a palette of 32,768 colors. 
+                    The PPU is clocked by the same signal as the CPU and generates a pixel every two or 
+                    four cycles.</p>
+                </div>
+              </li>
+              <li>
+                <h3><span></span>Audio</h3>
+                <div class="row">
+                  <p>The S-SMP audio subsystem consists of a 16-bit digital signal processor (DSP) to sequence 
+                    mix samples, an 8-bit SPC700 CPU to drive the DSP, and 64 KB of dedicated PSRAM. It was designed
+                    by Ken Kutaragi and produced by Sony and is completely independent from the rest of the system. 
+                    It is clocked at a nominal 24.576 MHz in both NTSC and PAL systems. It is capable of stereo sound, 
+                    composed from eight voices generated using 16-bit audio samples compressed using BRR and 
+                    capable of applying effects such as echo.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer"></footer>
+  </body>
+</html>
